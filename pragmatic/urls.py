@@ -19,6 +19,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('account/', include('accountapp.urls'))
+    path('admin/', admin.site.urls), # path(route, view, optional:kwargs, name)
+    path('account/', include('accountapp.urls')) # send to /account/ sub-url
 ]
