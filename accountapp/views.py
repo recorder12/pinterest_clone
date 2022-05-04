@@ -17,7 +17,6 @@ has_ownership = [account_ownership_required, login_required]
 
 @login_required
 def hello_world(request):
-
     if request.method == "POST":
         # get data from name
         temp = request.POST.get('hello_world_input')
