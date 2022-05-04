@@ -5,7 +5,7 @@ from django.db import models
 class Profile(models.Model):
     # CASCADE : when user is deleted, profile is deleted, too
     # related_name : user.profile --> call profile related to the user
-    user = models.OneToOneField(User, on_delete=models.CASCADE(), related_name='profile')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     image = models.ImageField(upload_to='profile/', null=True) # BASE_DIR/media/profile/
     nickname = models.CharField(max_length=20, unique=True, null=True)
     message = models.CharField(max_length=100, null=True)
