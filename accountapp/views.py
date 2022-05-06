@@ -40,8 +40,6 @@ class AccountDetailView(DetailView):
     context_object_name = 'target_user'
     template_name = 'accountapp/detail.html'
 
-@method_decorator(has_ownership, 'get')
-@method_decorator(has_ownership, 'post')
 class AccountUpdateView(UpdateView):
     model = User  # default django user model
     context_object_name = 'target_user'

@@ -24,4 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),  # path(route, view, optional:kwargs, name)
     path('accounts/', include('accountapp.urls')),  # send to /account/ sub-url
     path('profiles/', include('profileapp.urls')),
+    path('articles/', include('articleapp.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
